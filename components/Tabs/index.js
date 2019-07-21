@@ -7,3 +7,29 @@
 //
 //  The tab component should look like this:
 //    <div class="tab">topic here</div>
+
+const tab = {
+
+    axios.get('http://serverlocation.com/data')
+        .then( response => {
+            // deal with the response data in here
+
+        })
+        .catch( err => {
+            // deal with the error in here
+
+        })
+
+    
+  // loop through the topics
+
+  menuArray.forEach(item => {
+
+    const link = document.createElement('li');
+    link.textContent = item;
+    menuUL.appendChild(link);
+
+  });
+
+}
+
