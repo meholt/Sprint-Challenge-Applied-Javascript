@@ -8,7 +8,14 @@
 //  The tab component should look like this:
 //    <div class="tab">topic here</div>
 
-const tab = {
+function tabComponent(topic) {
+  let newTab = document.createElement('div');
+  newTab.textContent = topic;
+  newTab.classList.add('tab');
+
+  return newTab;
+  
+}
 
     axios.get('http://serverlocation.com/data')
         .then( response => {
