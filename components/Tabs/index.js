@@ -14,29 +14,34 @@ function tabComponent(topic) {
   newTab.classList.add('tab');
 
   return newTab;
-  
+
 }
 
-    axios.get('http://serverlocation.com/data')
-        .then( response => {
-            // deal with the response data in here
+axios.get('https://lambda-times-backend.herokuapp.com/topics')
+    .then( response => {
+        // deal with the response data in here
+        for (i = 0; i <= response.length; i++)  {
+          let tab = tabComponent(topic)
+          let topics = document.querySelector('.topics');
 
-        })
-        .catch( err => {
-            // deal with the error in here
-
-        })
+          topics.appendChild(tab);
+        }
+    })
+    .catch( err => {
+       // deal with the error in here
+        console.log("Error:", err);
+    })
 
     
   // loop through the topics
 
-  menuArray.forEach(item => {
+//   menuArray.forEach(item => {
 
-    const link = document.createElement('li');
-    link.textContent = item;
-    menuUL.appendChild(link);
+//     const link = document.createElement('li');
+//     link.textContent = item;
+//     menuUL.appendChild(link);
 
-  });
+//   });
 
-}
+// }
 
