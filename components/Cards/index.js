@@ -17,3 +17,25 @@
 // </div>
 //
 // Create a card for each of the articles and add the card to the DOM.
+
+// Function to Create Card Component
+function cardComponent(headline) {
+
+    // Main "Card" Div
+    let newCard = document.createElement('div');
+    newCard.classList.add('card');
+
+    // Headline Div
+    let headlineDiv = document.createElement('div');
+    headlineDiv.classList.add('headline');
+    headlineDiv.textContent = headline;
+    newCard.appendChild(headlineDiv);
+
+    // Author Div
+    let author = document.createElement('div');
+    author.classList.add('author');
+    
+  
+    return newCard;
+  
+  }

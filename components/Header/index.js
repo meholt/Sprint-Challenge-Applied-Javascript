@@ -29,4 +29,6 @@ function Header() {
     temp.textContent = '98°';
     header.appendChild(temp);
 
+    return header;
+
 }
