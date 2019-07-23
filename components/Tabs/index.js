@@ -9,7 +9,7 @@
 //    <div class="tab">topic here</div>
 
 // Function to Create Tab Component
-function tabComponent(topic) {
+function TabComponent(topic) {
   let newTab = document.createElement('div');
   newTab.textContent = topic;
   newTab.classList.add('tab');

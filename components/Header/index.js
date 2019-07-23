@@ -11,11 +11,13 @@
 
 function Header() {
     // Header Div
-    const header = document.querySelector('.headerContainer');
+    const header = document.createElement('div');
+    header.className = 'header';
 
     // Date - Span
     const date = document.createElement('span');
     date.className = 'date';
+    date.textContent = 'SMARCH 28, 2019';
     header.appendChild(date);
 
     // Title
@@ -32,3 +34,8 @@ function Header() {
     return header;
 
 }
+
+const header = Header();
+const headerContainer = document.querySelector('.header-container');
+
+headerContainer.appendChild(header);
