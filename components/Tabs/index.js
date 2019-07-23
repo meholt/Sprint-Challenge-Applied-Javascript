@@ -30,8 +30,8 @@ const topics = axios.get('https://lambda-times-backend.herokuapp.com/topics');
 
     console.log(topics);
 
-// Function to Create Tab Component
-const tabComponent = (tabName) => {
+// Create Tab Component
+const tabComponent = tabName => {
   let newTab = document.createElement('div');
   newTab.textContent = tabName;
   newTab.classList.add('tab');
